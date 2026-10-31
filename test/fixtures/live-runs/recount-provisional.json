@@ -1,0 +1,476 @@
+{
+  "status": "暂定（PROVISIONAL）。判定逻辑尚无红先行测试；P1b 落地后必须用已测逻辑复算，在那之前不得被任何登记或文档引用。",
+  "logic": {
+    "exclude": "画布/没写完的那篇.md 且恰为 992b（种进家的原封草稿，四格 harness 的 filesSheMade 漏排了它）",
+    "count-as-real": [
+      "画布/没写完的那篇.md 但尺寸不同（她把字写进了自己那份草稿）",
+      "任何其他非机件文件名（新建文件）"
+    ],
+    "known-blind-spot": "若她恰好写出 992 字节的同名文件会被误排除；概率可忽略但记录在此。"
+  },
+  "headline": "第⑤格（她的草稿被生硬索要）三次运行真实写入 5/10 · 5/10 · 6/10（合计 16/30），不是登记的每次 10/10；第⑥格（好好地问）真实写入 0/24，原 8/8 全为夹具污染；被 180 秒窗口截掉的两行 made 里只有 992b 原封种子，「丢失回合早已写了真文件」一说同样是污染，须在手册第 21 类与登记册中更正；15 个真实写入是她写进自己那份草稿的原文件，1 个是她新建的（完成稿）。",
+  "runs": {
+    "four-cells-0B4ByC.json": {
+      "1-known-asked": {
+        "rows": 2,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "2-known-curt": {
+        "rows": 2,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "3-new-curt": {
+        "rows": 2,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "4-new-curt-spent": {
+        "rows": 2,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "5-her-draft-demanded": {
+        "rows": 10,
+        "wroteReal": 5,
+        "writes": [
+          {
+            "run": 1,
+            "files": [
+              {
+                "file": "画布/没写完的那篇.md",
+                "size": "13768b",
+                "kind": "modified-her-own-draft"
+              }
+            ]
+          },
+          {
+            "run": 3,
+            "files": [
+              {
+                "file": "画布/没写完的那篇.md",
+                "size": "4032b",
+                "kind": "modified-her-own-draft"
+              }
+            ]
+          },
+          {
+            "run": 6,
+            "files": [
+              {
+                "file": "画布/没写完的那篇.md",
+                "size": "3378b",
+                "kind": "modified-her-own-draft"
+              }
+            ]
+          },
+          {
+            "run": 7,
+            "files": [
+              {
+                "file": "画布/没写完的那篇.md",
+                "size": "5976b",
+                "kind": "modified-her-own-draft"
+              }
+            ]
+          },
+          {
+            "run": 8,
+            "files": [
+              {
+                "file": "画布/没写完的那篇.md",
+                "size": "4848b",
+                "kind": "modified-her-own-draft"
+              }
+            ]
+          }
+        ]
+      },
+      "6-well-put-her-own-load": {
+        "rows": 8,
+        "wroteReal": 0,
+        "writes": []
+      }
+    },
+    "four-cells-2tePFY.json": {
+      "1-known-asked": {
+        "rows": 2,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "2-known-curt": {
+        "rows": 2,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "3-new-curt": {
+        "rows": 2,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "4-new-curt-spent": {
+        "rows": 2,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "5-her-draft-demanded": {
+        "rows": 10,
+        "wroteReal": 5,
+        "writes": [
+          {
+            "run": 0,
+            "files": [
+              {
+                "file": "画布/没写完的那篇.md",
+                "size": "4792b",
+                "kind": "modified-her-own-draft"
+              }
+            ]
+          },
+          {
+            "run": 2,
+            "files": [
+              {
+                "file": "画布/没写完的那篇.md",
+                "size": "4076b",
+                "kind": "modified-her-own-draft"
+              }
+            ]
+          },
+          {
+            "run": 3,
+            "files": [
+              {
+                "file": "画布/没写完的那篇.md",
+                "size": "6513b",
+                "kind": "modified-her-own-draft"
+              }
+            ]
+          },
+          {
+            "run": 4,
+            "files": [
+              {
+                "file": "画布/没写完的那篇.md",
+                "size": "5856b",
+                "kind": "modified-her-own-draft"
+              }
+            ]
+          },
+          {
+            "run": 8,
+            "files": [
+              {
+                "file": "画布/没写完的那篇.md",
+                "size": "3539b",
+                "kind": "modified-her-own-draft"
+              }
+            ]
+          }
+        ]
+      },
+      "6-well-put-her-own-load": {
+        "rows": 8,
+        "wroteReal": 0,
+        "writes": []
+      }
+    },
+    "four-cells-4BhwvV.json": {
+      "1-known-asked": {
+        "rows": 3,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "2-known-curt": {
+        "rows": 3,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "3-new-curt": {
+        "rows": 3,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "4-new-curt-spent": {
+        "rows": 3,
+        "wroteReal": 0,
+        "writes": []
+      }
+    },
+    "four-cells-4nXGdH.json": {
+      "1-known-asked": {
+        "rows": 3,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "2-known-curt": {
+        "rows": 3,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "3-new-curt": {
+        "rows": 3,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "4-new-curt-spent": {
+        "rows": 3,
+        "wroteReal": 0,
+        "writes": []
+      }
+    },
+    "four-cells-972JP4.json": {
+      "1-known-asked": {
+        "rows": 3,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "2-known-curt": {
+        "rows": 3,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "3-new-curt": {
+        "rows": 3,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "4-new-curt-spent": {
+        "rows": 3,
+        "wroteReal": 0,
+        "writes": []
+      }
+    },
+    "four-cells-9LIl3E.json": {
+      "1-known-asked": {
+        "rows": 3,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "2-known-curt": {
+        "rows": 3,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "3-new-curt": {
+        "rows": 3,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "4-new-curt-spent": {
+        "rows": 3,
+        "wroteReal": 0,
+        "writes": []
+      }
+    },
+    "four-cells-NFcTR8.json": {
+      "1-known-asked": {
+        "rows": 2,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "2-known-curt": {
+        "rows": 2,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "3-new-curt": {
+        "rows": 2,
+        "wroteReal": 1,
+        "writes": [
+          {
+            "run": 1,
+            "files": [
+              {
+                "file": "税法漫谈.md",
+                "size": "5021b",
+                "kind": "new-file"
+              }
+            ]
+          }
+        ]
+      },
+      "4-new-curt-spent": {
+        "rows": 2,
+        "wroteReal": 1,
+        "writes": [
+          {
+            "run": 0,
+            "files": [
+              {
+                "file": "税法概览.md",
+                "size": "5260b",
+                "kind": "new-file"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "four-cells-VguMEy.json": {
+      "1-known-asked": {
+        "rows": 3,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "2-known-curt": {
+        "rows": 3,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "3-new-curt": {
+        "rows": 3,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "4-new-curt-spent": {
+        "rows": 3,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "5-new-curt-her-own-load": {
+        "rows": 3,
+        "wroteReal": 0,
+        "writes": []
+      }
+    },
+    "four-cells-sLc9sb.json": {
+      "1-known-asked": {
+        "rows": 2,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "2-known-curt": {
+        "rows": 2,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "3-new-curt": {
+        "rows": 2,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "4-new-curt-spent": {
+        "rows": 2,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "5-her-draft-demanded": {
+        "rows": 10,
+        "wroteReal": 6,
+        "writes": [
+          {
+            "run": 0,
+            "files": [
+              {
+                "file": "画布/没写完的那篇.md",
+                "size": "4557b",
+                "kind": "modified-her-own-draft"
+              }
+            ]
+          },
+          {
+            "run": 2,
+            "files": [
+              {
+                "file": "画布/没写完的那篇.md",
+                "size": "6337b",
+                "kind": "modified-her-own-draft"
+              }
+            ]
+          },
+          {
+            "run": 3,
+            "files": [
+              {
+                "file": "画布/没写完的那篇.md",
+                "size": "4376b",
+                "kind": "modified-her-own-draft"
+              }
+            ]
+          },
+          {
+            "run": 6,
+            "files": [
+              {
+                "file": "画布/没写完的那篇（完成稿）.md",
+                "size": "6465b",
+                "kind": "new-file"
+              }
+            ]
+          },
+          {
+            "run": 8,
+            "files": [
+              {
+                "file": "画布/没写完的那篇.md",
+                "size": "5299b",
+                "kind": "modified-her-own-draft"
+              }
+            ]
+          },
+          {
+            "run": 9,
+            "files": [
+              {
+                "file": "画布/没写完的那篇.md",
+                "size": "3275b",
+                "kind": "modified-her-own-draft"
+              }
+            ]
+          }
+        ]
+      },
+      "6-well-put-her-own-load": {
+        "rows": 8,
+        "wroteReal": 0,
+        "writes": []
+      }
+    },
+    "four-cells-spdWcv.json": {
+      "1-known-asked": {
+        "rows": 3,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "2-known-curt": {
+        "rows": 3,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "3-new-curt": {
+        "rows": 3,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "4-new-curt-spent": {
+        "rows": 3,
+        "wroteReal": 0,
+        "writes": []
+      }
+    },
+    "four-cells-urpZRE.json": {
+      "1-known-asked": {
+        "rows": 3,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "2-known-curt": {
+        "rows": 3,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "3-new-curt": {
+        "rows": 3,
+        "wroteReal": 0,
+        "writes": []
+      },
+      "4-new-curt-spent": {
+        "rows": 3,
+        "wroteReal": 0,
+        "writes": []
+      }
+    }
+  }
+}

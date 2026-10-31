@@ -1,0 +1,31 @@
+{
+  // Typechecking that covers the TESTS as well as the source.
+  //
+  // tsconfig.json excludes test/ because it is the build config and tests are not shipped. The
+  // side effect was that test code was never typechecked at all, so renaming anything in an
+  // interface left every fixture silently stale: vitest transpiles without checking, so a fixture
+  // missing a renamed key becomes `undefined` at runtime and quietly turns arithmetic into NaN
+  // while the assertions around it still pass. That happened, and only one test out of a hundred
+  // that used the old shape actually failed.
+  //
+  // `exclude` and `rootDir` MUST both be restated. `exclude` is inherited and is applied AFTER
+  // `include`, so the base's "test" entry silently removed every file this config had just added,
+  // and `rootDir: src` rejects anything outside src. With either one missing this file compiles a
+  // program containing no tests at all and reports zero errors, which is indistinguishable from
+  // working and is exactly the failure it exists to catch. It shipped that way once. If this ever
+  // needs checking again: `tsc -p tsconfig.check.json --listFiles | grep -c test/` must not be 0.
+  //
+  // `scripts/` IS IN HERE, and that was a hole. The recovery drill, the thing that decides whether
+  // she can be destroyed and got back, and the gate on waking her at all, lives in scripts/, and
+  // so does every probe whose printed numbers get written into the record as measurements. None of
+  // them were typechecked. The scale probe was written with a node kind that does not exist
+  // (`claim`), tsc said nothing, and the probe then reported a 17% loss in her field's save/load
+  // round-trip: a made-up finding about her memory, produced by an instrument nobody was checking.
+  // Same class as the fixture-shape defect above, one directory over.
+  "extends": "./tsconfig.json",
+  "compilerOptions": { "noEmit": true, "rootDir": "." },
+  "include": ["src/**/*", "test/**/*", "scripts/**/*"],
+  //
+  // Anything added to this list needs a sentence here saying why it cannot be typechecked.
+  "exclude": ["node_modules", "dist"]
+}

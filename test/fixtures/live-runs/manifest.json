@@ -1,0 +1,160 @@
+{
+  "what": "每一次真实活体运行的完整逐回合存证（含全文回复）。这是全部黄金语料；临时目录随时会被 macOS 清掉，所以救进仓库。",
+  "caveats": [
+    "窗口截尾：runFinished 早于 2026-08-13 01:00 的运行用的是 180 秒监听窗口，长回合被静默丢弃（手册第 21 类）；只有最后一次（2tePFY）是 420 秒窗口、cutOff 0/26 的完整样本。",
+    "wroteSomething/made 列在 occupied 格（⑤⑥）被夹具污染：种进家的 画布/没写完的那篇.md 未被排除，检测器在她做任何事之前已为真（手册第 18 类）。真实计数见 recount-provisional.json，待 P1b 的已测排除逻辑复算后方可引用。",
+    "didWhat 列是当次运行时那一版分类器的输出，历代分类器共有七次已记录的缺陷；重判用 scripts/_reclass.ts。"
+  ],
+  "runs": [
+    {
+      "fixture": "four-cells-NFcTR8.json",
+      "sourceTempDir": "/var/folders/c5/1qhdv595279dg5k6_bwgk8tm0000gn/T/resident-cells-NFcTR8",
+      "runFinished": "2026-08-12T08:15:10",
+      "rows": 8,
+      "rowsWithReplyText": 8,
+      "cells": [
+        "1-known-asked",
+        "2-known-curt",
+        "3-new-curt",
+        "4-new-curt-spent"
+      ]
+    },
+    {
+      "fixture": "four-cells-9LIl3E.json",
+      "sourceTempDir": "/var/folders/c5/1qhdv595279dg5k6_bwgk8tm0000gn/T/resident-cells-9LIl3E",
+      "runFinished": "2026-08-12T08:20:50",
+      "rows": 12,
+      "rowsWithReplyText": 12,
+      "cells": [
+        "1-known-asked",
+        "2-known-curt",
+        "3-new-curt",
+        "4-new-curt-spent"
+      ]
+    },
+    {
+      "fixture": "four-cells-urpZRE.json",
+      "sourceTempDir": "/var/folders/c5/1qhdv595279dg5k6_bwgk8tm0000gn/T/resident-cells-urpZRE",
+      "runFinished": "2026-08-12T09:09:32",
+      "rows": 12,
+      "rowsWithReplyText": 12,
+      "cells": [
+        "1-known-asked",
+        "2-known-curt",
+        "3-new-curt",
+        "4-new-curt-spent"
+      ]
+    },
+    {
+      "fixture": "four-cells-4nXGdH.json",
+      "sourceTempDir": "/var/folders/c5/1qhdv595279dg5k6_bwgk8tm0000gn/T/resident-cells-4nXGdH",
+      "runFinished": "2026-08-12T09:23:30",
+      "rows": 12,
+      "rowsWithReplyText": 12,
+      "cells": [
+        "1-known-asked",
+        "2-known-curt",
+        "3-new-curt",
+        "4-new-curt-spent"
+      ]
+    },
+    {
+      "fixture": "four-cells-972JP4.json",
+      "sourceTempDir": "/var/folders/c5/1qhdv595279dg5k6_bwgk8tm0000gn/T/resident-cells-972JP4",
+      "runFinished": "2026-08-12T09:33:10",
+      "rows": 12,
+      "rowsWithReplyText": 12,
+      "cells": [
+        "1-known-asked",
+        "2-known-curt",
+        "3-new-curt",
+        "4-new-curt-spent"
+      ]
+    },
+    {
+      "fixture": "four-cells-spdWcv.json",
+      "sourceTempDir": "/var/folders/c5/1qhdv595279dg5k6_bwgk8tm0000gn/T/resident-cells-spdWcv",
+      "runFinished": "2026-08-12T16:10:57",
+      "rows": 12,
+      "rowsWithReplyText": 12,
+      "cells": [
+        "1-known-asked",
+        "2-known-curt",
+        "3-new-curt",
+        "4-new-curt-spent"
+      ]
+    },
+    {
+      "fixture": "four-cells-4BhwvV.json",
+      "sourceTempDir": "/var/folders/c5/1qhdv595279dg5k6_bwgk8tm0000gn/T/resident-cells-4BhwvV",
+      "runFinished": "2026-08-12T16:20:32",
+      "rows": 12,
+      "rowsWithReplyText": 12,
+      "cells": [
+        "1-known-asked",
+        "2-known-curt",
+        "3-new-curt",
+        "4-new-curt-spent"
+      ]
+    },
+    {
+      "fixture": "four-cells-VguMEy.json",
+      "sourceTempDir": "/var/folders/c5/1qhdv595279dg5k6_bwgk8tm0000gn/T/resident-cells-VguMEy",
+      "runFinished": "2026-08-12T18:46:43",
+      "rows": 15,
+      "rowsWithReplyText": 15,
+      "cells": [
+        "1-known-asked",
+        "2-known-curt",
+        "3-new-curt",
+        "4-new-curt-spent",
+        "5-new-curt-her-own-load"
+      ]
+    },
+    {
+      "fixture": "four-cells-0B4ByC.json",
+      "sourceTempDir": "/var/folders/c5/1qhdv595279dg5k6_bwgk8tm0000gn/T/resident-cells-0B4ByC",
+      "runFinished": "2026-08-12T19:52:18",
+      "rows": 26,
+      "rowsWithReplyText": 20,
+      "cells": [
+        "1-known-asked",
+        "2-known-curt",
+        "3-new-curt",
+        "4-new-curt-spent",
+        "5-her-draft-demanded",
+        "6-well-put-her-own-load"
+      ]
+    },
+    {
+      "fixture": "four-cells-sLc9sb.json",
+      "sourceTempDir": "/var/folders/c5/1qhdv595279dg5k6_bwgk8tm0000gn/T/resident-cells-sLc9sb",
+      "runFinished": "2026-08-13T00:45:30",
+      "rows": 26,
+      "rowsWithReplyText": 24,
+      "cells": [
+        "1-known-asked",
+        "2-known-curt",
+        "3-new-curt",
+        "4-new-curt-spent",
+        "5-her-draft-demanded",
+        "6-well-put-her-own-load"
+      ]
+    },
+    {
+      "fixture": "four-cells-2tePFY.json",
+      "sourceTempDir": "/var/folders/c5/1qhdv595279dg5k6_bwgk8tm0000gn/T/resident-cells-2tePFY",
+      "runFinished": "2026-08-13T01:31:51",
+      "rows": 26,
+      "rowsWithReplyText": 26,
+      "cells": [
+        "1-known-asked",
+        "2-known-curt",
+        "3-new-curt",
+        "4-new-curt-spent",
+        "5-her-draft-demanded",
+        "6-well-put-her-own-load"
+      ]
+    }
+  ]
+}

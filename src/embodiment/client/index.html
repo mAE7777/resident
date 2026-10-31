@@ -1,0 +1,74 @@
+<!doctype html>
+<!--
+  Her face. Served by the mind's own face server; open http://127.0.0.1:8765 and this page
+  connects back on the same origin.
+
+  The built-in face is drawn on a canvas from her live PAD state (breath, blink, gaze, mouth).
+  A borrowed Live2D model at ./model/ (he puts one there himself) is PLANNED AND NOT BUILT:
+  face.js checks whether the file is there and says so in the corner, and the runtime loader is
+  deliberately unwritten until there is a real face to wire. It would load code from a CDN into
+  this page, so when it is written it is a NEW DOOR and belongs on the inventory before it ships.
+
+  WHAT ACTUALLY LEAVES THIS PAGE — stated plainly, because the paragraph that used to be here
+  said "NOTHING on this page touches the network beyond the WebSocket to the mind", and that was
+  not true. It was true of the mind<->face link and was read as a claim about everything:
+    · the WebSocket to her mind — loopback, same origin, a way IN;
+    · the microphone button — the browser's zh-CN recognition, which in Chrome uploads the
+      captured audio to Google to be transcribed. Kept as it is, on purpose;
+    · speech synthesis, IF the only zh voice on this machine is a network-backed one. face.js
+      prefers a local voice at every step and says in the corner when it could not get one.
+
+  Her voice: low, level, and a little slow, a low-ish pitch, flat, at a slightly slow rate, zh
+  voice preferred, synthesized on the machine with the speakers. Whatever the system happens to
+  have is a STAND-IN: her real voice, and her real face, are meant to be designed for her.
+
+  Listening: hold-free continuous recognition (zh-CN), paused while she is speaking so she
+  does not hear herself through the microphone. Clicking her, or Esc, stops her mid-sentence
+  (the mind aborts the turn: what she had not said yet, she does not say).
+-->
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>她</title>
+<style>
+  :root { color-scheme: dark; }
+  html, body { margin: 0; height: 100%; background: #0d0f12; color: #cfd3d9; font: 14px/1.6 "Songti SC", "Noto Serif CJK SC", serif; }
+  #stage { position: fixed; inset: 0; display: grid; place-items: center; }
+  #face { width: min(72vmin, 560px); height: min(72vmin, 560px); cursor: pointer; }
+  #doing { position: fixed; top: 18px; left: 0; right: 0; text-align: center; color: #6f7680; font-size: 13px; letter-spacing: .08em; }
+  #notice { position: fixed; top: 44px; left: 0; right: 0; text-align: center; color: #8c8066; font: 12px/1.6 ui-monospace, "SF Mono", Menlo, monospace; letter-spacing: .02em; }
+  #say { position: fixed; left: 50%; bottom: 96px; transform: translateX(-50%); max-width: 64ch; text-align: center; color: #e8eaee; font-size: 17px; min-height: 1.6em; text-wrap: balance; }
+  #bar { position: fixed; left: 50%; bottom: 28px; transform: translateX(-50%); display: flex; gap: 10px; align-items: center; }
+  #input { width: 44ch; max-width: 60vw; background: #16191e; color: #e8eaee; border: 1px solid #2a2f37; border-radius: 8px; padding: 9px 12px; font: inherit; outline: none; }
+  #input:focus { border-color: #3d444f; }
+  button { background: #16191e; color: #aeb4bd; border: 1px solid #2a2f37; border-radius: 8px; padding: 9px 14px; font: inherit; cursor: pointer; }
+  button.on { color: #d9b98a; border-color: #6b5836; }
+  #corner { position: fixed; right: 14px; bottom: 12px; color: #4a5058; font-size: 11px; }
+  #offline { position: fixed; inset: 0; display: none; place-items: center; background: #0d0f12; color: #6f7680; letter-spacing: .2em; }
+</style>
+</head>
+<body>
+<div id="stage"><canvas id="face" width="900" height="900"></canvas></div>
+<div id="doing"></div>
+<div id="notice"></div>
+<div id="say"></div>
+<div id="bar">
+  <input id="input" placeholder="说点什么…（回车发送）" autocomplete="off">
+  <button id="mic" title="开/关 听">听</button>
+  <!--
+    THE CURTAIN. Off by default and off after every reload — a camera that remembers being on is a
+    camera that is on when he did not decide it. What crosses when it is open is NOT a picture: the
+    page reduces each frame to "is anything moving" and "how long has it been still" and sends only
+    those numbers. The pixels never leave this canvas, and face.js has a test that keeps it that way.
+  -->
+  <button id="cam" title="开/关 让她感觉到你在（只送"有没有动"，不送画面）">帘</button>
+</div>
+<div id="corner"></div>
+<div id="offline">她不在线</div>
+<!-- The server writes the per-boot key in here as it serves this page. It is the only
+     way a client gets one, which is what makes the socket check on the other end mean
+     something. The placeholder is what sits on disk; a live key never does. -->
+<script>window.__FACE_KEY__ = "__FACE_KEY_GOES_HERE__";</script>
+<script src="face.js"></script>
+</body>
+</html>
